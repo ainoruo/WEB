@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear {
+  clear: both;
+}
+
+p {
+  color: rgb(3, 3, 3);
+  font-weight: 600;
+  padding-left: 40px;
+}
+
+main {
+  background-image: url("images/wall.png");
+  background-size: cover;
+  padding: 10px;
+  width: 1000px;
+  margin: 100px auto 50px;
+  padding-left: 20px;
+  padding-right: 100px;
+}
+
+footer {
+  height: 100px;
+  margin-top: 150px;
+  color: rgb(239, 241, 241);
+  text-align: center;
+  padding-top: 40px;
+  background-color: rgb(93, 81, 105);
+}
+
+#gym {
+  width: 300px;
+  float: left;
+  margin-top: 30px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+nav {
+  width: 1000px;
+  height: 80px;
+  margin: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0f0e1a;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  padding: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+li a.hytegym {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: aqua;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+li a.hytegym:hover {
+  text-decoration: none;
+}
+
+li a:hover {
+  color: aqua;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+h1 {
+  font-size: medium;
+  color: rgb(113, 5, 107);
+}
+
+span.styled-text {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: larger;
+}
+
+.centered {
+  padding-top: 40px;
+  text-align: center;
+}
