@@ -6,70 +6,29 @@ let normalBmi = `Normaaliksi on valittu se painoindeksin alue, jossa ihmisen ter
 
 let highBmi = `Kun painoindeksi ylittää 25, ollaan liikapainon puolella. Liikakilojen määrä voi vaihdella erittäin paljon, muutamasta kilosta moniin kymmeniin kiloihin. Siksi on hyödyllistä täsmentää, kuinka suuresta ylipainosta on kyse.`;
 
-//BOM tiedot
-
-let age = 14;
-
-let teksti = "Moi, olen " + age + " ikäinen";
-console.log(teksti);
-
-let teksti2 = `Moi olen yhä vuoden ${age} ikäinen`;
-console.log(teksti2);
-
-window.console.log("Moi, tämä toimii");
-console.log("Moro taas");
-
-console.log(window.innerHeight);
-console.log(window.innerWidth);
-
 //tietojen haku
-//hakee ensimmäisen minkä löytää
 const analysis = document.querySelector(".analysis");
-console.log(analysis);
-console.log(analysis.innerText);
-console.log(analysis.innerHTML);
-
 
 //tietojen muokkaus
 analysis.textContent= 'Terveppä terve🩰';
-// analysis.textContent = normalBmi;
-
-
-//kaikki
-const allP = document.querySelectorAll("p");
-console.log(allP);
-
-for (const p of allP) {
-  console.log("P elementin korkeus");
-  console.log(p.offsetHeight);
-}
 
 //eventit
-
 document.addEventListener('keydown', function(e) {
     console.log(e.key);
 });
-
 
 const nappula = document.querySelector('.calculate');
 nappula.addEventListener('click', function (evt) {
     console.log('Nappulaa klikattiin');
     console.log(evt);
 
-
-//Yleensä kun UI:ssa saadaan arvo se on lähtökohtaisesti STRING muotoinen    
     const weight = Number(document.getElementById('weight').value);
     const height = Number(document.getElementById('height').value);
-
-    console.log(typeof weight);
-
-    let yht = weight + height;
-    console.log(yht);
 
     if (!weight || !height) {
         analysis.textContent = 'Muista lisätä numerot!!';
     } else {
-        resettifunktio();
+        resettiFunktio();
         bmiLaskuri(weight, height);
     }
 });
@@ -95,8 +54,13 @@ function bmiLaskuri(weight, height) {
     }
 }
 
-function resettifunktio() {
-    //tyylien resetointi
+function resettiFunktio() {
+    // Resetoidaan värit
+    const bmiClasses = ['lowBmi', 'normalBmi', 'highBmi'];
+    bmiClasses.forEach(className => {
+        const elements = document.querySelectorAll('.' + className);
+        elements.forEach(element => element.classList.remove(className)); 
+    });
 }
 
 

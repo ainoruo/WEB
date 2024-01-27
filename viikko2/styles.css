@@ -43,7 +43,7 @@ main {
   width: 200px;
   height: 150px;
   position: absolute;
-  top: -95px;
+  top: -110px;
   right: 10px;
   background: none;
 }
@@ -81,7 +81,7 @@ li a {
   
 }
 
-li a.hytegym {
+li a.text {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   color: aqua;
@@ -89,7 +89,7 @@ li a.hytegym {
   padding-left: 50px;
 }
 
-li a.hytegym:hover {
+li a.text:hover {
   text-decoration: none;
 }
 
@@ -118,9 +118,22 @@ span.styled-text {
   text-align: center;
 }
 
+#target {
+  width: 350px;
+  margin: auto;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(85, 61, 108);
+}
+
+#target p {
+  color: aliceblue;
+}
+
 footer {
   height: 100px;
-  margin-top: 150px;
+  margin-top: 50px;
   color: rgb(239, 241, 241);
   text-align: center;
   padding-top: 40px;
